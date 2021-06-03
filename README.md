@@ -4,18 +4,19 @@ Database:
 Create database HoTenDB  
 Use HoTenDB  
 CREATE TABLE EmpType(  
-__TypeId int IDENTITY(1,1) primary key,  __
-__TypeName nvarchar(50) NULL  __
-__)  __
+	TypeId int IDENTITY(1,1) primary key,  
+	TypeName nvarchar(50) NULL  
+	)  
 CREATE TABLE Employee(  
-__EmployeeId int IDENTITY(1,1) primary key,  __
-__Name nvarchar(50) NOT NULL,  __
-__Address nvarchar(255) NULL, __ 
-__Department nvarchar(20) NOT NULL,  __
-__Gender bit,  __
-__EmployeeType int NULL,  __
-__constraint fk_Employee_Type foreign key (EmployeeType) references EmpType(TypeId) __ 
-__)  __
+	EmployeeId int IDENTITY(1,1) primary key,  
+	Name nvarchar(20) NOT NULL,  
+	Address nvarchar(20) NULL,  
+	Department nvarchar(20) NOT NULL,  
+	Gender bit NULL,  
+	EmployeeType int NULL,  
+	constraint fk_Employee_Type foreign key (EmployeeType) references EmpType(TypeId)  
+	)  
+
 INSERT INTO EmpType(TypeName) VALUES (N'Fulltime')  
 INSERT INTO EmpType(TypeName) VALUES (N'PartTime')  
 INSERT INTO EmpType(TypeName) VALUES (N'Contract')  
