@@ -1,5 +1,5 @@
 # student-winform-c-
-Student Management CRUD winform C# .Netframework with entityframework
+Student Management CRUD winform C# .Netframework with entityframework (h2) 
 Database: 
 Create database HoTenDB
 Use HoTenDB
